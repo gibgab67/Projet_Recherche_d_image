@@ -46,4 +46,22 @@ public class AnalyseImage {
 	    return newImgMedian;
 	    //Viewer2D.exec(image);   
 	}
+	
+	public static int[][] constructHistogramme (Image input) {
+		int dimX = input.getXDim();
+		int dimY = input.getYDim();
+		int dimB = input.getBDim();
+		
+		int[][] result = new int[3][256];
+		
+	    for (int y = 0; y < dimY; y++) {
+	        for (int x = 0; x < dimX; x++) {
+	        	for (int b = 0; b < dimB; b++) {
+		        	result[b][input.getPixelByte(x, y, 0, 0, b)]++;
+		        }
+	        }
+	    }
+		
+		return result;
+	}
 }
