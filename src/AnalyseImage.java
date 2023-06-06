@@ -38,4 +38,8 @@ public class AnalyseImage {
 	    return newImgMedian;
 	    //Viewer2D.exec(image);   
 	}
+	
+	public static Histogramme constructHistogramme (Image input) {
+		return new Histogramme(input);
+	}
 }
