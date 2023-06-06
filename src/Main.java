@@ -14,14 +14,15 @@ import fr.unistra.pelican.util.Color;
 public class Main {
 
 	public static void main(String[] args) {
-		Image img = ImageLoader.exec("img_Test/maldive.jpg");
+		Image img1 = ImageLoader.exec("img_Test/modifHisto.png");
+		Image img2 = ImageLoader.exec("img_Test/sobRGB.png");
 		
 		//AnalyseImage.constructHistogramme(img);
 		
-		Histogramme histo = AnalyseImage.constructHistogramme(img);
-		histo.display();
-		histo.normalize().display();
+		Histogramme histo1 = AnalyseImage.constructHistogramme(img1);
+		Histogramme histo2 = AnalyseImage.constructHistogramme(img2);
 		
+		System.out.println(AnalyseImage.distanceEuclidienneHisto(histo1, histo2, 0));
 	}
 	
 	

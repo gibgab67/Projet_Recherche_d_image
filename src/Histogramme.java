@@ -103,25 +103,6 @@ public class Histogramme {
 			
 			
 		}
-		/*
-		for (int bHisto=0; bHisto < histogramme.length; bHisto++) {
-			int unit = this.histogramme[0].length/10;
-			int moyenne = 0;
-			
-			for (int elem = 0; elem < histoDiscrete[0].length; elem++) {
-				for(int id = elem * unit; id < unit; id += unit) {
-					for(int j = id; j < id + unit; j++ ) {
-						moyenne += this.histogramme[bHisto][j];
-					}
-					moyenne /= unit;
-					
-					
-				}
-				
-				histoDiscrete[bHisto][elem] = moyenne;
-			}
-			
-		}*/
 		
 		this.histogramme = histoDiscrete;
 	}
@@ -138,6 +119,26 @@ public class Histogramme {
 		}
 		
 		return new Histogramme(out);
+	}
+	
+	
+	public double[][] getHistogramme() {
+		return histogramme;
+	}
+	public void setHistogramme(double[][] histogramme) {
+		this.histogramme = histogramme;
+	}
+	public int getNbCannaux() {
+		return nbCannaux;
+	}
+	public void setNbCannaux(int nbCannaux) {
+		this.nbCannaux = nbCannaux;
+	}
+	public int getNbPixel() {
+		return nbPixel;
+	}
+	public void setNbPixel(int nbPixel) {
+		this.nbPixel = nbPixel;
 	}
 	
 }

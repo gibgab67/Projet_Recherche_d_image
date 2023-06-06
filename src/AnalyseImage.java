@@ -50,4 +50,15 @@ public class AnalyseImage {
 	public static Histogramme constructHistogramme (Image input) {
 		return new Histogramme(input);
 	}
+	
+	public static double distanceEuclidienneHisto(Histogramme histo1, Histogramme histo2, int canal) {
+		double somme = 0;
+		for(int i = 0; i < histo1.histogramme.length; i++) {
+			somme += Math.pow((histo1.getHistogramme()[canal][i] - histo2.getHistogramme()[canal][i]), 2);
+		}
+		
+		double result = Math.sqrt(somme);
+		
+		return result;
+	}
 }
