@@ -1,3 +1,6 @@
+import java.io.FileWriter;
+import java.io.PrintWriter;
+
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
@@ -6,6 +9,8 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import fr.unistra.pelican.Image;
 import fr.unistra.pelican.algorithms.io.ImageLoader;
@@ -14,13 +19,14 @@ import fr.unistra.pelican.util.Color;
 public class Main {
 
 	public static void main(String[] args) {
-		Image img1 = ImageLoader.exec("img_Test/modifHisto.png");
-		Image img2 = ImageLoader.exec("img_Test/sobRGB.png");
+		Image imgR = ImageLoader.exec("img_Test/modifHisto.png");
+		Image imgI = ImageLoader.exec("img_Test/sobRGB.png");
 		
 		//AnalyseImage.constructHistogramme(img);
 		
-		Histogramme histo1 = AnalyseImage.constructHistogramme(img1);
-		Histogramme histo2 = AnalyseImage.constructHistogramme(img2);
+		Histogramme histo1 = AnalyseImage.constructHistogramme(imgR);
+		Histogramme histo2 = AnalyseImage.constructHistogramme(imgI);
+		
 		
 		System.out.println(AnalyseImage.distanceEuclidienneHisto(histo1, histo2, 0));
 	}
@@ -60,7 +66,21 @@ public class Main {
         frame.setVisible(true);
     }
 	
-	
+	public static void toJson(String path, String key, String value)
+    {
+        JSONObject json = new JSONObject();
+        try {
+            json.put(key, value);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+ 
+        try (PrintWriter out = new PrintWriter(new FileWriter(path))) {
+            out.write(json.toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     
     
 }

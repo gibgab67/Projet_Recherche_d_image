@@ -53,9 +53,6 @@ public class SearchSimilarImages {
                
                     Image denoisedImage = AnalyseImage.FiltreMedian(baseImage);
 
-              
-                    Image baseHistogram = computeHistogram(denoisedImage);
-
                     double similarity = calculateSimilarity(queryHistogram, baseHistogram);
 
                  
@@ -78,19 +75,11 @@ public class SearchSimilarImages {
     }
 
  
-    private static double calculateSimilarity(Image hist1, Image hist2) {
-        double[] histData1 = hist1.getImageData();
-        double[] histData2 = hist2.getImageData();
+    private static double calculateSimilarity(Histogramme hist1, Histogramme hist2) {
+        double distance0 = AnalyseImage.distanceEuclidienneHisto(hist1, hist2, 0);
+        double distance1 = AnalyseImage.distanceEuclidienneHisto(hist1, hist2, 1);
+        double distance2 = AnalyseImage.distanceEuclidienneHisto(hist1, hist2, 2);
 
-        if (histData1.length != histData2.length) {
-            throw new IllegalArgumentException("Les histogrammes doivent avoir la même taille !");
-        }
-
-        double sumOfSquaredDifferences = 0.0;
-        for (int i = 0; i < histData1.length; i++) {
-            sumOfSquaredDifferences += Math.pow(histData1[i] - histData2[i], 2);
-        }
-
-        return Math.sqrt(sumOfSquaredDifferences);
+        return distance0+distance1+distance2;
     }
 }

@@ -17,5 +17,17 @@
 	<classpathentry kind="lib" path="C:/Users/satas/eclipse-workspace/Projet_Recherche_d_image/lib/slf4j-api-1.7.25.jar"/>
 	<classpathentry kind="lib" path="C:/Users/satas/eclipse-workspace/Projet_Recherche_d_image/lib/slf4j-simple-1.7.25.jar"/>
 	<classpathentry kind="lib" path="C:/Users/satas/eclipse-workspace/Projet_Recherche_d_image/lib/webcam-capture-0.3.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gabriel.micucci/Documents/GitHub/Projet_Recherche_d_image/lib/bridj-0.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gabriel.micucci/Documents/GitHub/Projet_Recherche_d_image/lib/jai_codec.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gabriel.micucci/Documents/GitHub/Projet_Recherche_d_image/lib/jai_core.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gabriel.micucci/Documents/GitHub/Projet_Recherche_d_image/lib/jai_imageio.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gabriel.micucci/Documents/GitHub/Projet_Recherche_d_image/lib/java-sdk-6.2.0-jar-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gabriel.micucci/Documents/GitHub/Projet_Recherche_d_image/lib/jcommon-1.0.23.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gabriel.micucci/Documents/GitHub/Projet_Recherche_d_image/lib/jfreechart-1.0.19.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gabriel.micucci/Documents/GitHub/Projet_Recherche_d_image/lib/pelican.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gabriel.micucci/Documents/GitHub/Projet_Recherche_d_image/lib/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gabriel.micucci/Documents/GitHub/Projet_Recherche_d_image/lib/slf4j-simple-1.7.25.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gabriel.micucci/Documents/GitHub/Projet_Recherche_d_image/lib/webcam-capture-0.3.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gabriel.micucci/Documents/GitHub/Projet_Recherche_d_image/java-json.jar/java-json.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

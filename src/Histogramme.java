@@ -143,29 +143,4 @@ public class Histogramme {
 	public void setNbPixel(int nbPixel) {
 		this.nbPixel = nbPixel;
 	}
-	
-	public class ImageHistogram {
-
-	    private static int numBins = 256; 
-
-	   
-	    private static Histogramme computeHistogram(Image input) {
-	        Image hsvImage = RGBToHSV.exec(input);
-
-	        int dimB = hsvImage.getBDim();
-	        double[][] histogramData = new double[dimB][numBins];
-
-	      
-	        for (int y = 0; y < hsvImage.getYDim(); y++) {
-	            for (int x = 0; x < hsvImage.getXDim(); x++) {
-	                for (int b = 0; b < dimB; b++) {
-	                    int bin = (int) (hsvImage.getPixelByte(x, y, 0, 0, b) * (numBins - 1));
-	                    histogramData[b][bin]++;
-	                }
-	            }
-	        }
-
-	        return new Histogramme(histogramData);
-	    }
-	}
 }

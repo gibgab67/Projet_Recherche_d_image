@@ -47,7 +47,12 @@ public class AnalyseImage {
 	public static double distanceEuclidienneHisto(Histogramme histo1, Histogramme histo2, int canal) {
 		double somme = 0;
 		for(int i = 0; i < histo1.histogramme.length; i++) {
-			somme += Math.pow((histo1.getHistogramme()[canal][i] - histo2.getHistogramme()[canal][i]), 2);
+			if(histo1.getHistogramme()[canal] != null && histo2.getHistogramme()[canal] != null) {
+				somme += Math.pow((histo1.getHistogramme()[canal][i] - histo2.getHistogramme()[canal][i]), 2);
+			}
+			else {
+				return 0;
+			}
 		}
 		
 		double result = Math.sqrt(somme);
