@@ -1,3 +1,4 @@
+
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
@@ -14,7 +15,7 @@ import fr.unistra.pelican.util.Color;
 public class Main {
 
 	public static void main(String[] args) {
-		Image img = ImageLoader.exec("img_Test/maldive.jpg");
+		Image img = ImageLoader.exec("src/images/zepeck.jpg");
 		
 		//AnalyseImage.constructHistogramme(img);
 		
@@ -33,7 +34,7 @@ public class Main {
         XYSeriesCollection seriesColl =  new XYSeriesCollection(series);
 		JFreeChart freeChart = ChartFactory.createXYBarChart(
 	            "Histogramme de l'image",
-	            "Canal N°" + canal,
+	            "Canal Nï¿½" + canal,
 	            false,
 	            "Nombre de pixels",
 	            seriesColl,

@@ -1,5 +1,11 @@
+/ImageSearch.class
+/test$ImageSearch.class
+/SearchSimilarImages$ImageSearch.class
+/SearchSimilarImages.class
+/images/
+/abou/
 /AnalyseImage.class
-/Main.class
-/test.class
-/histogramme.class
 /Histogramme.class
+/Main.class
+/SearchSimilarImages$SimilarImage.class
+/Histogramme$ImageHistogram.class
